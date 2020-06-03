@@ -74,10 +74,6 @@ def top_n(d, n):
 # were very helpful here.
 def analyze(nodes, edge_weights, filename = "graph.txt", num_users = 10):
 	f = open(filename, "w+", encoding="utf-8")
-	# nodes_i = range(len(nodes))
-
-	# look_up = dict(zip(nodes, nodes_i))
-	# edges_i = list(map(lambda t: (look_up[t[0]], look_up[t[1]]), edges))
 
 	G = nx.DiGraph()
 	G.add_nodes_from(nodes)
@@ -159,10 +155,6 @@ m_nodes, m_edge_weights = create_graph(keywords_magafuli)
 c_nodes, c_edge_weights = create_graph(keywords_corona)
 analyze(m_nodes, m_edge_weights, filename = "Magufuli_Graph_Analysis.txt")
 analyze(c_nodes, c_edge_weights, filename = "COVID_Graph_Analysis.txt")
-
-# print(g.maxdegree())
-# print(g.vs.select(_degree = g.vs.degree())["name"])
-	# all_user_pairs = all_user_pairs.union(users)
 
 # f1 = open("graph_magafuli.txt", "w+", encoding="utf-8")
 # f2 = open("graph_covid.txt", "w+", encoding="utf-8")
